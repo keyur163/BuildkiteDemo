@@ -1,0 +1,14 @@
+steps:
+  - label: ":page_facing_up: Generate Text File"
+    command: |
+      echo "Hello from Buildkite Demo!" > output.txt
+    artifact_paths:
+      - "output.txt"
+    agents:
+      queue: "default"
+
+  - label: ":cloud: Upload to S3"
+    command: "bash scripts/upload.sh"
+    depends_on: "~"
+    agents:
+      queue: "default"
