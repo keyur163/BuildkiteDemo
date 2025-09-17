@@ -9,6 +9,5 @@ steps:
 
   - label: ":cloud: Upload to S3"
     command: "bash scripts/upload.sh"
-    depends_on: "~"
     agents:
       queue: "default"
