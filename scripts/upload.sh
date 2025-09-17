@@ -6,7 +6,7 @@ export AWS_SECRET_ACCESS_KEY=$(buildkite-agent secret get secretkey)
 export AWS_DEFAULT_REGION=AWS-REGION
 
 
-BUCKET_NAME="my-buildkite-demo-bucket"
+BUCKET_NAME="buildkitedemo"
 FILE="output.txt"
 
 if [ ! -f "$FILE" ]; then
