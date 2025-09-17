@@ -3,7 +3,7 @@ set -e
 
 export AWS_ACCESS_KEY_ID=$(buildkite-agent secret get accesskey)
 export AWS_SECRET_ACCESS_KEY=$(buildkite-agent secret get secretkey)
-export AWS_DEFAULT_REGION=AWS-REGION
+export AWS_DEFAULT_REGION="eu-north-1"
 
 
 BUCKET_NAME="buildkitedemo"
